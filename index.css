@@ -64,8 +64,9 @@ body {
 header {
     background-color: var(--primary-black);
     color: var(--text-white);
-    padding: 1em 0;
-    position: fixed;
+    /* padding: 1em 0; */
+    padding: 10px 20px;
+    position: relative;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -367,7 +368,9 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
     .hero {
-        padding-top: 180px;
+        padding-top: 120px; /* Add extra space on top for mobile devices */
+        margin-top: 100px; /* Increase margin to ensure space below the header */
+        margin-bottom: 160px; /* Adjust margin bottom for mobile devices */
     }
 
     .contact-content {
