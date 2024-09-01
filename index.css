@@ -248,12 +248,15 @@ section p {
 }
 
 /* Resume Section */
-.resume p {
-    margin-bottom: 1.5em;
+.resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.resume .btn {
-    display: inline-block;
+.resume p {
+    margin-bottom: 1.5em;
 }
 
 /* Testimonials Section */
