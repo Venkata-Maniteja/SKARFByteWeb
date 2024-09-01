@@ -1,4 +1,10 @@
-document.querySelector('.hamburger-menu').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('active');
-    console.log("hamburger clicked");
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    
+    menuToggle.addEventListener('click', function() {
+        navList.classList.toggle('show');
+        console.log("burger tapped")
+    });
 });
