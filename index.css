@@ -111,6 +111,16 @@ nav a:hover {
     padding-top: 60px; /* To account for fixed header */
 }
 
+.hero-image {
+    width: 100%; /* or set a specific width, e.g., 300px */
+    max-width: 600px;
+    margin-top: 60px; /* space between the button and the image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .hero h2 {
     font-family: var(--font-primary);
     font-size: var(--font-size-h1);
