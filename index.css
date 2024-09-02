@@ -64,18 +64,26 @@ body {
 header {
     background-color: var(--primary-black);
     color: var(--text-white);
-    /* padding: 1em 0; */
     padding: 10px 20px;
     position: relative;
     width: 100%;
     top: 0;
     z-index: 1000;
+    background-image: url('resources/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    justify-content: flex-end; /* Align the container to the bottom */
 }
 
-header .container {
+.menu-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Horizontally center the nav */
     align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .logo h1 {
@@ -84,21 +92,40 @@ header .container {
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 1.5em;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Optional: Set max width for better design */
+    margin: 0 auto;
+    list-style: none;
 }
 
-nav a {
-    color: var(--text-white);
-    text-decoration: none;
-    font-weight: var(--font-weight-semibold);
-    transition: color 0.3s;
+
+.menu-container a {
+    text-decoration: none; /* Remove underline from all links */
+    color: var(--text-primary); /* Adjust to your text color */
+    font-weight: bold;
+    font-size: larger;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: var(--text-primary); /* Set the default text color */
+    display: block;
 }
 
-nav a:hover {
-    color: var(--primary-orange);
+/* Hover effect */
+.menu-container a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten the background */
+    color: var(--primary-orange); /* Change text color on hover */
+    transform: translateY(-3px); /* Animate the tab upwards */
 }
+
+/* Active/Selected tab */
+.menu-container a.active {
+    background-color: var(--primary-orange); /* Highlight current tab */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Elevate the active tab */
+}
+
 
 /* Hero Section */
 .hero {
@@ -337,7 +364,6 @@ section p {
 footer {
     background-color: var(--primary-black);
     color: var(--text-white);
-    padding: 2em 0;
     text-align: center;
 }
 
@@ -368,8 +394,6 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
     .hero {
-        padding-top: 120px; /* Add extra space on top for mobile devices */
-        margin-top: 100px; /* Increase margin to ensure space below the header */
         margin-bottom: 160px; /* Adjust margin bottom for mobile devices */
     }
 
@@ -382,37 +406,21 @@ footer {
         align-items: flex-start;
     }
 
-    nav ul {
-        display: none; /* Hide the navigation by default on small screens */
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    nav ul.show {
-        display: flex; /* Show the navigation when active */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
     .logo {
         width: 100%;
         text-align: center;
     }
 
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
+    header {
+        background-image: url('resources/images/logo.jpg');
+        background-position: center;
+        height: 300px;
     }
+    
 }
 
 @media (min-width: 769px) {
-    .menu-toggle {
-        display: none; /* Hide the menu toggle on larger screens */
-    }
+
 }
 
 @media (max-width: 480px) {
