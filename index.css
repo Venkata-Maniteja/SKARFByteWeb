@@ -351,14 +351,17 @@ section p {
     margin-bottom: 0.5em;
 }
 
-.social-media a {
-    margin-right: 0.5em;
+.contact-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between icons as needed */
 }
 
-.social-media img {
-    width: 30px;
-    height: 30px;
+.contact-social img {
+    width: 35px;
+    height: 35px;
 }
+
 
 /* Footer */
 footer {
@@ -380,15 +383,6 @@ footer {
 
 .footer-links a:hover {
     color: var(--primary-orange);
-}
-
-.footer-social a {
-    margin: 0 0.5em;
-}
-
-.footer-social img {
-    width: 25px;
-    height: 25px;
 }
 
 /* Media Queries */
